@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0CBA742B3D2C90006C701C /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CBA732B3D2C90006C701C /* Date+Today.swift */; };
 		8D26D1512B3A82070064C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1502B3A82070064C4DA /* AppDelegate.swift */; };
 		8D26D1532B3A82070064C4DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1522B3A82070064C4DA /* SceneDelegate.swift */; };
 		8D26D1552B3A82070064C4DA /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1542B3A82070064C4DA /* ReminderListViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0CBA732B3D2C90006C701C /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 		8D26D14D2B3A82070064C4DA /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D26D1502B3A82070064C4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D26D1522B3A82070064C4DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				8D26D1812B3A9C6E0064C4DA /* Reminder.swift */,
+				8D0CBA732B3D2C90006C701C /* Date+Today.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D26D1552B3A82070064C4DA /* ReminderListViewController.swift in Sources */,
+				8D0CBA742B3D2C90006C701C /* Date+Today.swift in Sources */,
 				8D26D1512B3A82070064C4DA /* AppDelegate.swift in Sources */,
 				8D26D1532B3A82070064C4DA /* SceneDelegate.swift in Sources */,
 				8D26D1822B3A9C6E0064C4DA /* Reminder.swift in Sources */,
