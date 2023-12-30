@@ -20,7 +20,7 @@ class ReminderViewController: UICollectionViewController {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.showsSeparators = false
         
-        var listLayout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
+        let listLayout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
         super.init(collectionViewLayout: listLayout)
     }
     
@@ -36,6 +36,11 @@ class ReminderViewController: UICollectionViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Row) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
+        
+        if #available(iOS 16, *) {
+            navigationItem.style = .navigator
+        }
+        navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
         
         updateSnapshot()
     }
