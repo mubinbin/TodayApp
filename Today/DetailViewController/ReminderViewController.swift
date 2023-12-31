@@ -76,6 +76,6 @@ class ReminderViewController: UICollectionViewController {
             fatalError("Unable to find matching section")
         }
         
-        return Section
+        return section
     }
 }
