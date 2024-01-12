@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D02E8FE2B3E5E2F00016D3D /* ReminderDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02E8FD2B3E5E2F00016D3D /* ReminderDoneButton.swift */; };
 		8D02E9002B3E5F1A00016D3D /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02E8FF2B3E5F1A00016D3D /* ReminderListViewController+Actions.swift */; };
+		8D04AC3C2B5200AA0047246A /* TextFieldContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D04AC3B2B5200AA0047246A /* TextFieldContentView.swift */; };
 		8D0CBA742B3D2C90006C701C /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CBA732B3D2C90006C701C /* Date+Today.swift */; };
 		8D26D1512B3A82070064C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1502B3A82070064C4DA /* AppDelegate.swift */; };
 		8D26D1532B3A82070064C4DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1522B3A82070064C4DA /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		8D02E8FD2B3E5E2F00016D3D /* ReminderDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDoneButton.swift; sourceTree = "<group>"; };
 		8D02E8FF2B3E5F1A00016D3D /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
+		8D04AC3B2B5200AA0047246A /* TextFieldContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldContentView.swift; sourceTree = "<group>"; };
 		8D0CBA732B3D2C90006C701C /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 		8D26D14D2B3A82070064C4DA /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D26D1502B3A82070064C4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8DC03F2B426C53002E10A6 /* UIView+PinnedSubview.swift */,
+				8D04AC3B2B5200AA0047246A /* TextFieldContentView.swift */,
 			);
 			path = ContentViews;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				8DB2D5032B3F4B300052EB90 /* ReminderViewController.swift in Sources */,
 				8D26D1552B3A82070064C4DA /* ReminderListViewController.swift in Sources */,
 				8D0CBA742B3D2C90006C701C /* Date+Today.swift in Sources */,
+				8D04AC3C2B5200AA0047246A /* TextFieldContentView.swift in Sources */,
 				8DB2D5052B3F58E80052EB90 /* ReminderViewController+Row.swift in Sources */,
 				8D02E8FE2B3E5E2F00016D3D /* ReminderDoneButton.swift in Sources */,
 				8D26D1512B3A82070064C4DA /* AppDelegate.swift in Sources */,
