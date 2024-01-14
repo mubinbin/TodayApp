@@ -62,31 +62,24 @@ class ReminderViewController: UICollectionViewController {
         switch(section, row) {
             
         case (_, .header(let title)):
-            var contentConfiguration = cell.defaultContentConfiguration()
-            contentConfiguration.text = title
-            cell.contentConfiguration = contentConfiguration
+            cell.contentConfiguration = headerConfiguration(for: cell, with: title)
             
         case (.view, _):
-            var contentConfiguration = cell.defaultContentConfiguration()
-            contentConfiguration.text = text(for: row)
-            contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
-            contentConfiguration.image = row.image
-            cell.contentConfiguration = contentConfiguration
+            cell.contentConfiguration = defaultConfiguration(for: cell, at: row)
+            
+        case (.title, .editableText(let title)):
+            cell.contentConfiguration = titleConfiguration(for: cell, with: title)
+            
+        case (.date, .editableDate(let date)):
+            cell.contentConfiguration = dateConfiguration(for: cell, with: date)
+            
+        case (.notes, .editableText(let notes)):
+            cell.contentConfiguration = notesConfiguration(for: cell, with: notes)
             
         default: fatalError("Unexpected combination of section and row.")
         }
         
         cell.tintColor = .todayPrimaryTint
-    }
-    
-    func text(for row: Row) -> String? {
-        switch row {
-        case .date: return reminder.dueDate.dayText
-        case .notes: return reminder.notes
-        case .title: return reminder.title
-        case .time: return reminder.dueDate.formatted(date: .omitted, time: .shortened)
-        default: return nil
-        }
     }
     
     private func updateSnapshotForViewing() {
@@ -99,9 +92,9 @@ class ReminderViewController: UICollectionViewController {
     private func updateSnapshotForEditing() {
         var snapshot = Snapshot()
         snapshot.appendSections([.title, .date, .notes])
-        snapshot.appendItems([Row.header(Section.title.name)], toSection: .title)
-        snapshot.appendItems([Row.header(Section.date.name)], toSection: .date)
-        snapshot.appendItems([Row.header(Section.notes.name)], toSection: .notes)
+        snapshot.appendItems([Row.header(Section.title.name), Row.editableText(reminder.title)], toSection: .title)
+        snapshot.appendItems([Row.header(Section.date.name), Row.editableDate(reminder.dueDate)], toSection: .date)
+        snapshot.appendItems([Row.header(Section.notes.name), Row.editableText(reminder.notes)], toSection: .notes)
         dataSource.apply(snapshot)
     }
     
