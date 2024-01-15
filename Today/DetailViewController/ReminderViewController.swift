@@ -13,9 +13,11 @@ class ReminderViewController: UICollectionViewController {
     
     private var dataSource: DataSource!
     var reminder: Reminder
+    var workingReminder: Reminder
     
     init(reminder: Reminder) {
         self.reminder = reminder
+        self.workingReminder = reminder
         
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.showsSeparators = false
@@ -50,9 +52,9 @@ class ReminderViewController: UICollectionViewController {
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         if editing {
-            updateSnapshotForEditing()
+            prepareForEditing()
         } else {
-            updateSnapshotForViewing()
+            prepareForViewing()
         }
     }
     
@@ -82,11 +84,22 @@ class ReminderViewController: UICollectionViewController {
         cell.tintColor = .todayPrimaryTint
     }
     
+    private func prepareForViewing() {
+        if workingReminder != reminder {
+            reminder = workingReminder
+        }
+        updateSnapshotForViewing()
+    }
+    
     private func updateSnapshotForViewing() {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
         snapshot.appendItems([Row.header(""), Row.title, Row.date, Row.time, Row.notes], toSection: .view)
         dataSource.apply(snapshot)
+    }
+    
+    private func prepareForEditing() {
+        updateSnapshotForEditing()
     }
     
     private func updateSnapshotForEditing() {
