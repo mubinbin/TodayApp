@@ -16,6 +16,10 @@ class ReminderListViewController: UICollectionViewController {
             .filter{ listStyle.shouldInclude(date: $0.dueDate) }
             .sorted{ $0.dueDate < $1.dueDate }
     }
+    let listStyleSegmentControl = UISegmentedControl(items: [
+        ReminderListStyle.today.name,
+        ReminderListStyle.future.name,
+        ReminderListStyle.all.name])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,9 @@ class ReminderListViewController: UICollectionViewController {
         if #available(iOS 16, *) {
             navigationItem.style = .navigator
         }
+        
+        listStyleSegmentControl.selectedSegmentIndex = listStyle.rawValue
+        navigationItem.titleView = listStyleSegmentControl
         
         updateSnapshot()
         
