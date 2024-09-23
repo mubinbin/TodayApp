@@ -1,0 +1,45 @@
+//
+//  ProgressHeaderView.swift
+//  Today
+//
+//  Created by Binbin Mu on 9/22/24.
+//
+
+import UIKit
+
+//https://developer.apple.com/tutorials/app-dev-training/creating-a-progress-view
+class ProgressHeaderView: UICollectionReusableView {
+    // CGFloat represents floating-point scalar values. The CG prefix prepends objects from the Core Graphics framework, which is a drawing engine
+    var progress: CGFloat = 0
+    
+    private let upperView = UIView(frame: .zero)
+    private let lowerView = UIView(frame: .zero)
+    private let containerView = UIView(frame: .zero)
+    
+    private func preparesSubview() {
+        containerView.addSubview(upperView)
+        containerView.addSubview(lowerView)
+        addSubview(containerView)
+        
+        upperView.translatesAutoresizingMaskIntoConstraints = false
+        lowerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        containerView.heightAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1).isActive = true
+        
+        containerView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        containerView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
+        
+        upperView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        upperView.bottomAnchor.constraint(equalTo: lowerView.topAnchor).isActive = true
+        lowerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        upperView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        lowerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        upperView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        lowerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+    }
+}
