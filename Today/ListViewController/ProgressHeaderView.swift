@@ -10,6 +10,8 @@ import UIKit
 //https://developer.apple.com/tutorials/app-dev-training/creating-a-progress-view
 class ProgressHeaderView: UICollectionReusableView {
     // CGFloat represents floating-point scalar values. The CG prefix prepends objects from the Core Graphics framework, which is a drawing engine
+    static var elementKind: String { UICollectionView.elementKindSectionHeader }
+    
     var progress: CGFloat = 0 {
         didSet {
             heightConstraint?.constant = progress * bounds.height
