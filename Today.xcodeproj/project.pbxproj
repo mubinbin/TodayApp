@@ -14,6 +14,7 @@
 		8D0533F82CA85EE60027B31B /* TodayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0533F72CA85EE60027B31B /* TodayError.swift */; };
 		8D0533FA2CA860DC0027B31B /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0533F92CA860DC0027B31B /* EKEventStore+AsyncFetch.swift */; };
 		8D0533FC2CA8674C0027B31B /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0533FB2CA8674C0027B31B /* Reminder+EKReminder.swift */; };
+		8D0533FE2CA8750D0027B31B /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0533FD2CA8750D0027B31B /* ReminderStore.swift */; };
 		8D0CBA742B3D2C90006C701C /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0CBA732B3D2C90006C701C /* Date+Today.swift */; };
 		8D26D1512B3A82070064C4DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1502B3A82070064C4DA /* AppDelegate.swift */; };
 		8D26D1532B3A82070064C4DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26D1522B3A82070064C4DA /* SceneDelegate.swift */; };
@@ -64,6 +65,7 @@
 		8D0533F72CA85EE60027B31B /* TodayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayError.swift; sourceTree = "<group>"; };
 		8D0533F92CA860DC0027B31B /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
 		8D0533FB2CA8674C0027B31B /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
+		8D0533FD2CA8750D0027B31B /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 		8D0CBA732B3D2C90006C701C /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 		8D26D14D2B3A82070064C4DA /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D26D1502B3A82070064C4DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				8D0533F72CA85EE60027B31B /* TodayError.swift */,
 				8D0533F92CA860DC0027B31B /* EKEventStore+AsyncFetch.swift */,
 				8D0533FB2CA8674C0027B31B /* Reminder+EKReminder.swift */,
+				8D0533FD2CA8750D0027B31B /* ReminderStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				8D26D1822B3A9C6E0064C4DA /* Reminder.swift in Sources */,
 				8D55EF2F2CA77426006E9AF4 /* CAGradientLayer+ListStyle.swift in Sources */,
 				8DE81ACA2B3DFE900063A5E6 /* ReminderListViewController+DataSource.swift in Sources */,
+				8D0533FE2CA8750D0027B31B /* ReminderStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
