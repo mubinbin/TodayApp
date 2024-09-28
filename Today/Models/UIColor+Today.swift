@@ -18,27 +18,27 @@ extension UIColor {
     }
 
     static var todayGradientAllBegin: UIColor {
-        UIColor(named: "TodayGradientAllBegin") ?? .systemFill
+        UIColor(named: "TodayGradientAllBegin") ?? .systemYellow
     }
 
     static var todayGradientAllEnd: UIColor {
-        UIColor(named: "TodayGradientAllEnd") ?? .quaternarySystemFill
+        UIColor(named: "TodayGradientAllEnd") ?? .systemOrange
     }
 
     static var todayGradientFutureBegin: UIColor {
-        UIColor(named: "TodayGradientFutureBegin") ?? .systemFill
+        UIColor(named: "TodayGradientFutureBegin") ?? .systemRed
     }
 
     static var todayGradientFutureEnd: UIColor {
-        UIColor(named: "TodayGradientFutureEnd") ?? .quaternarySystemFill
+        UIColor(named: "TodayGradientFutureEnd") ?? .systemPink
     }
 
     static var todayGradientTodayBegin: UIColor {
-        UIColor(named: "TodayGradientTodayBegin") ?? .systemFill
+        UIColor(named: "TodayGradientTodayBegin") ?? .systemBlue
     }
 
     static var todayGradientTodayEnd: UIColor {
-        UIColor(named: "TodayGradientTodayEnd") ?? .quaternarySystemFill
+        UIColor(named: "TodayGradientTodayEnd") ?? .systemTeal
     }
 
     static var todayNavigationBackground: UIColor {
@@ -50,10 +50,10 @@ extension UIColor {
     }
 
     static var todayProgressLowerBackground: UIColor {
-        UIColor(named: "TodayProgressLowerBackground") ?? .systemGray
+        UIColor(named: "TodayProgressLowerBackground") ?? .systemCyan
     }
 
     static var todayProgressUpperBackground: UIColor {
-        UIColor(named: "TodayProgressUpperBackground") ?? .systemGray6
+        UIColor(named: "TodayProgressUpperBackground") ?? .systemMint
     }
 }
